@@ -1,0 +1,68 @@
+*{
+	margin:0;
+}
+header {
+	background-image: url("images/design2_image1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height:40vh;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 10vh;
+	border:solid;
+	border-color: black;
+}
+h1	{
+	font-size:300%;
+	position:absolute;
+	top:0;
+}
+h2	{
+	text-align:center;
+	color:black;
+	background-color: white;
+	font-size:200%;
+	position: relative;
+	top: 84%;
+	border-top:solid;
+	border-bottom: solid;
+	border-color: black
+}
+img {
+	float:left;
+	width: 150px;
+	margin:30px;
+	display:flex;
+}
+main {
+	float:left;
+	margin:30px;
+	width: 50vw
+}
+nav {
+	position: absolute;
+	right:5vw;
+	top:7vh;
+}
+nav>div {
+	display: inline-flex;
+	flex-direction: row;
+	margin-right: 40px;
+}
+div>a {
+	padding: 4px 15px;
+	background-color: blue;
+	flex-wrap:nowrap;
+	color:white;
+	border:solid;
+	border-color: black;
+	box-shadow: 3px 3px black;
+	text-decoration: none;
+}
+#verde {
+	background-color: green;
+}
+p {
+	margin: 30px;
+	margin-top: 0;
+}

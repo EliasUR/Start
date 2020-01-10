@@ -1,0 +1,44 @@
+*{
+	margin:0;
+}
+header	{
+	height:40vh;
+	background-image: url("images/design1_image1.jpg"); 
+	background-repeat: no-repeat;
+	background-size: cover
+
+}
+h1	{
+	font-size:400%;
+}
+h2	{
+	text-align:center;
+	color:white;
+	background-color: black;
+	font-size:200%;
+	position: relative;
+	top: 55%
+}
+img {
+	position: absolute;
+	width: 170px;
+	right: 9%;
+	top: 24%;
+	z-index: 99;
+}
+nav {
+	float: left;
+	margin:30px;
+}
+main {
+	float:left;
+	margin:30px;
+	width: 50vw
+}
+div {
+	margin: 30px;
+
+	}
+.upcoming {
+	margin:30px;
+}

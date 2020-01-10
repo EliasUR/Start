@@ -1,0 +1,73 @@
+*{
+	margin:0;
+}
+body {
+	background-image: url("images/design1_image1.jpg");
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+img {
+	float:right;
+	padding:30px;
+}
+h1	{
+	font-size:300%;
+	background-color: #154360;
+	color:white;
+	padding-left: 10vw;
+	text-shadow: 2px 2px black
+}
+h2	{
+	text-align:center;
+	color:black;
+	background-color: #ACFA58;
+	font-size:200%;
+	position: relative;
+	top: 84%;
+	border-top:solid;
+	border-bottom: solid;
+	border-color: black;
+}
+nav {
+	position: absolute;
+	right:5vw;
+	top:7vh;
+}
+nav>div {
+	display: inline-flex;
+	flex-direction: row;
+	margin-right: 40px;
+}
+h3{
+	font-size: 150%;
+	background-image: url("images/design3_image1.jpg");
+	background-size: cover;
+	display:inline-block;
+}
+div>a {
+	padding: 4px 15px;
+	background-color: blue;
+	flex-wrap:nowrap;
+	color:white;
+	border:solid;
+	border-color: black;
+	box-shadow: 3px 3px black;
+	text-decoration: none;
+}
+#verde {
+	background-color: green;
+}
+main {
+	float:right;
+	position:absolute;
+	padding:5%; 
+	z-index:-99;
+	width: 50vw
+}
+p {
+	margin: 30px;
+	margin-top: 0;
+	font-size: 109%;
+	background-color: #58D68D;
+	box-shadow: 5px 5px black;
+}
