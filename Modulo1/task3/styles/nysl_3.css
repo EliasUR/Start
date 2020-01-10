@@ -30,13 +30,17 @@ h2	{
 }
 nav {
 	position: absolute;
-	right:5vw;
-	top:7vh;
+	left: 70vw;
+	top:30px;
+	width: 30%;
+	margin-right:0;
 }
 nav>div {
-	display: inline-flex;
+	display:inline-flex;
 	flex-direction: row;
-	margin-right: 40px;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin:5px;
 }
 h3{
 	font-size: 150%;
@@ -47,7 +51,6 @@ h3{
 div>a {
 	padding: 4px 15px;
 	background-color: blue;
-	flex-wrap:nowrap;
 	color:white;
 	border:solid;
 	border-color: black;
@@ -65,6 +68,13 @@ main {
 	width: 50vw
 }
 p {
+	margin: 30px;
+	margin-top: 0;
+	font-size: 109%;
+	background-color: #58D68D;
+	box-shadow: 5px 5px black;
+}
+main>ul,ol{
 	margin: 30px;
 	margin-top: 0;
 	font-size: 109%;
