@@ -5,10 +5,14 @@ body {
 	background-image: url("images/design1_image1.jpg");
 	background-repeat:no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
+	background-position: center 10vh;
 }
-img {
-	float:right;
-	padding:30px;
+header{
+	width: 100%;
+	left: 0;
+	top: 0;
+	position: fixed;
 }
 h1	{
 	font-size:300%;
@@ -31,7 +35,7 @@ h2	{
 nav {
 	position: absolute;
 	left: 70vw;
-	top:30px;
+	top:40px;
 	width: 30%;
 	margin-right:0;
 }
@@ -41,12 +45,6 @@ nav>div {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	margin:5px;
-}
-h3{
-	font-size: 150%;
-	background-image: url("images/design3_image1.jpg");
-	background-size: cover;
-	display:inline-block;
 }
 div>a {
 	padding: 4px 15px;
@@ -60,10 +58,23 @@ div>a {
 #verde {
 	background-color: green;
 }
+div>a:hover{
+	background-color: green; 
+}
+img{
+	float:right;
+	margin: 13vh ;
+}
+h3{
+	font-size: 150%;
+	background-image: url("images/design3_image1.jpg");
+	background-size: cover;
+	display:inline-block;
+}
 main {
 	float:right;
 	position:absolute;
-	padding:5%; 
+	padding: 10% 5%; 
 	z-index:-99;
 	width: 50vw
 }
@@ -74,7 +85,7 @@ p {
 	background-color: #58D68D;
 	box-shadow: 5px 5px black;
 }
-main>ul,ol{
+main>ul, main>ol{
 	margin: 30px;
 	margin-top: 0;
 	font-size: 109%;
