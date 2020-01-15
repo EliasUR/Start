@@ -14,7 +14,7 @@ header{
 	margin:0;
 }
 h1	{
-	font-size:300%;
+	font-size:310%;
 	background-color: #154360;
 	color:white;
 	text-align: center;
@@ -25,31 +25,31 @@ h1	{
 #pelota{
 	position: absolute;
 	left:10vw;
-	top:-12vh;
+	top:-9vh;
 	width:50px;
 }
 #pelota2{
 	position: absolute;
 	right:10vw;
-	top:-12vh;
+	top:-9vh;
 	width:50px;
 }
 #mini{
 	position: absolute;
 	left:0;
-	top:-12vh;
+	top:-9vh;
 	width:50px;
 }
 #mini2{
 	position: absolute;
 	right:0;
-	top:-12vh;
+	top:-9vh;
 	width:50px;
 }
 h2{display:none;}
 img{
 	float:right;
-	margin: 13vh ;
+	margin: 10vh;
 }
 nav {
 	display:flex;
@@ -62,7 +62,7 @@ nav>div{
 	display: flex;
 }
 div>a {
-	font-size: 150%;
+	font-size: 140%;
 	text-decoration: none;
 	padding: 0 25px;
 	color: black;
@@ -74,12 +74,12 @@ div>a {
 }
 #verde>a{
 	color: white;
-	font-size:200%;
+	font-size:175%;
 	text-shadow: 2px 2px black;
 }
 div>a:hover{
 	background-color: #58D68D;
-	font-size: 200%;
+	font-size: 175%;
 }
 h3{
 	font-size: 150%;
@@ -118,12 +118,24 @@ th,td{
 }
 legend{
 	background-color: #58D68D;
-	border: 1px solid black;
+	border: 1px solid gray;
 	font-size: 120%;
 }
-.tablas{
+.formulario{
 	border:none;
 	box-shadow: none;
 	font-size: 100%;
 	margin:0px;
+}
+input[type=text]{
+	border: none;
+ 	border-bottom: 1px dashed gray;
+ 	background-color: #58D68D; 
+}
+.textbox{
+	width: 70%;
+}
+input[type=Submit]{
+	float: right;
+	margin: 20px 0 5px 0;
 }
