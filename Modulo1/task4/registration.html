@@ -17,7 +17,7 @@
 				<div><a href="index.html">Home</a></div>
 				<div><a href="about.html">About NYSL</a></div>
 				<div><a href="contact.html">Contact</a></div>
-				<div><a href="rules.html">Rules and Politices</a></div>
+				<div><a href="rules.html">Rules and Policies</a></div>
 				<div><a href="game_info.html">Game Information</a></div>
 				<div id="verde"><a href="registration.html">Registration Form</a></div>
 			</nav>
@@ -27,42 +27,71 @@
 			<form action="show_data.html" method="GET" target="_blank">
 				<fieldset>
 					<legend><strong>Personal Information:</strong></legend>
-					Player’s First Name:
-					<input type="text" name="First_Name">
-					Last Name:
-					<input type="text" name="Last_Name"><br>
-					Street Address:
-					<input class="textbox" type="text" name="Street_Addres"><br>
-					City:
-					<input type="text" name="City">
-					Zip Code:
-					<input type="text" name="Zip_Code"><br>
-					Birth Date (mm/dd/yyyy):
-					<input type="text" name="Birth_Date">
+					<label>Player’s First Name:
+						<input type="text" name="First_Name">
+					</label>
+					<label>Last Name:
+						<input type="text" name="Last_Name">
+					</label><br>
+					<label>Street Address:
+						<input class="boxlarge" type="text" name="Street_Addres">
+					</label>
+					<br>
+					<label>City:
+						<input type="text" name="City">
+					</label>
+					<label>Zip Code:
+						<input type="text" name="Zip_Code">
+					</label><br>
+					<label>Birth Date:
+						<input type="date" name="Birth_Date">
+					</label>
 					Gender:
-					<input type="radio" name="Gender" value="male" checked> 
-					Male
-					<input type="radio" name="Gender" value="female"> 
-					Female <br>
+					<label>
+						<input type="radio" name="Gender" value="male"> 
+						Male
+					</label>
+					<label>
+						<input type="radio" name="Gender" value="female"> 
+					Female
+					</label> <br>
 					Grade:
-					<input type="radio" name="Grade" value="Pre-School" checked>
-					Pre-School
-					<input type="radio" name="Grade" value="1st">
-					1st
-					<input type="radio" name="Grade" value="2nd">
-					2nd
-					<input type="radio" name="Grade" value="3rd">
-					3rd
-					<input type="radio" name="Grade" value="4th">
-					4th
-					<input type="radio" name="Grade" value="5th">
-					5th <br>
-					Parent/Guardian:
-					<input class="textbox" type="text" name="Parent_Guardian"><br>
-					Contact Phone:
-					<input type="text" name="Contact_Phone">
-					Contact Email:
-					<input type="text" name="Contact_Email">
+					<label>
+						<input type="radio" name="Grade" value="Pre-School">
+						Pre-School
+					</label>
+					<label>
+						<input type="radio" name="Grade" value="1st">
+						1st
+					</label>
+					<label>
+						<input type="radio" name="Grade" value="2nd">
+						2nd
+					</label>
+					<label>
+						<input type="radio" name="Grade" value="3rd">
+						3rd
+					</label>
+					<label>
+						<input type="radio" name="Grade" value="4th">
+						4th
+					</label>
+					<label>
+						<input type="radio" name="Grade" value="5th">
+						5th
+					</label> <br>
+					<label>
+						Parent/Guardian:
+						<input class="boxlarge" type="text" name="Parent_Guardian">
+					</label><br>
+					<label>
+						Contact Phone:
+						<input type="tel" name="Contact_Phone">
+					</label>
+					<label>
+						Contact Email:
+						<input type="email" name="Contact_Email">
+					</label>
 				</fieldset>
 				<fieldset>
 					<legend><strong>Which elementary schools do you live near?</strong></legend>
@@ -102,20 +131,28 @@
 					<table class="formulario">
 						<tr>
 							<td>
-								<input type="checkbox" name="Positions_that_you_normaly_play" value="Forward">
-								Forward
+								<label>
+									<input type="checkbox" name="Positions_that_you_normaly_play" value="Forward">
+									Forward
+								</label>
 							</td>
 							<td>
-								<input type="checkbox" name="Positions_that_you_normaly_play" value="Midfield">
-								Midfield
+								<label>
+									<input type="checkbox" name="Positions_that_you_normaly_play" value="Midfield">
+									Midfield
+								</label>
 							</td>
 							<td>
-								<input type="checkbox" name="Positions_that_you_normaly_play" value="Defense">
-								Defense
+								<label>
+									<input type="checkbox" name="Positions_that_you_normaly_play" value="Defense">
+									Defense
+								</label>
 							</td>
 							<td>
-								<input type="checkbox" name="Positions_that_you_normaly_play" value="Goalkeeper">
-								Goalkeeper
+								<label>
+									<input type="checkbox" name="Positions_that_you_normaly_play" value="Goalkeeper">
+									Goalkeeper
+								</label>
 							</td>
 						</tr>
 					</table>
@@ -125,20 +162,28 @@
 					<table class="formulario">
 						<tr>
 							<td>
-								<input type="checkbox" name="Positions_that_you_want_to_play" value="Forward">
-								Forward
+								<label>
+									<input type="checkbox" name="Positions_that_you_want_to_play" value="Forward">
+									Forward
+								</label>
 							</td>
 							<td>
-								<input type="checkbox" name="Positions_that_you_want_to_play" value="Midfield">
-								Midfield
+								<label>
+									<input type="checkbox" name="Positions_that_you_want_to_play" value="Midfield">
+									Midfield
+								</label>
 							</td>
 							<td>
-								<input type="checkbox" name="Positions_that_you_want_to_play" value="Defense">
-								Defense
+								<label>
+									<input type="checkbox" name="Positions_that_you_want_to_play" value="Defense">
+									Defense
+								</label>
 							</td>
 							<td>
-								<input type="checkbox" name="Positions_that_you_want_to_play" value="Goalkeeper">
-								Goalkeeper
+								<label>
+									<input type="checkbox" name="Positions_that_you_want_to_play" value="Goalkeeper">
+									Goalkeeper
+								</label>
 							</td>
 						</tr>
 					</table>
@@ -154,72 +199,100 @@
 						</tr>
 						<tr>
 							<td>
-								<input type="radio" name="Jersey_Size" value="Small">
-								Small
+								<label>
+									<input type="radio" name="Jersey_Size" value="Small">
+									Small
+								</label>
 							</td>
 							<td>
-								<input type="radio" name="Shorts_Size" value="Small">
-								Small
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<input type="radio" name="Jersey_Size" value="Youth Small">
-								Youth Small
-							</td>
-							<td>
-								<input type="radio" name="Shorts_Size" value="Youth Small">
-								Youth Small
+								<label>
+									<input type="radio" name="Shorts_Size" value="Small">
+									Small
+								</label>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<input type="radio" name="Jersey_Size" value="Medium">
-								Medium
+								<label>
+									<input type="radio" name="Jersey_Size" value="Youth Small">
+									Youth Small
+								</label>
 							</td>
 							<td>
-								<input type="radio" name="Shorts_Size" value="Medium">
-								Medium
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<input type="radio" name="Jersey_Size" value="Youth Medium">
-								Youth Medium
-							</td>
-							<td>
-								<input type="radio" name="Shorts_Size" value="Youth Medium">
-								Youth Medium
+								<label>
+									<input type="radio" name="Shorts_Size" value="Youth Small">
+									Youth Small
+								</label>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<input type="radio" name="Jersey_Size" value="Large">
-								Large
+								<label>
+									<input type="radio" name="Jersey_Size" value="Medium">
+									Medium
+								</label>
 							</td>
 							<td>
-								<input type="radio" name="Shorts_Size" value="Large">
-								Large
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<input type="radio" name="Jersey_Size" value="Youth Large">
-								Youth Large
-							</td>
-							<td>
-								<input type="radio" name="Shorts_Size" value="Youth Large">
-								Youth Large
+								<label>
+									<input type="radio" name="Shorts_Size" value="Medium">
+									Medium
+								</label>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<input type="radio" name="Jersey_Size" value="Extra-Large">
-								Extra-Large
+								<label>
+									<input type="radio" name="Jersey_Size" value="Youth Medium">
+									Youth Medium
+								</label>
 							</td>
 							<td>
-								<input type="radio" name="Shorts_Size" value="Extra-Large">
-								Extra-Large
+								<label>
+									<input type="radio" name="Shorts_Size" value="Youth Medium">
+									Youth Medium
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>
+									<input type="radio" name="Jersey_Size" value="Large">
+									Large
+								</label>
+							</td>
+							<td>
+								<label>
+									<input type="radio" name="Shorts_Size" value="Large">
+									Large
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>
+									<input type="radio" name="Jersey_Size" value="Youth Large">
+									Youth Large
+								</label>
+							</td>
+							<td>
+								<label>
+									<input type="radio" name="Shorts_Size" value="Youth Large">
+									Youth Large
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>
+									<input type="radio" name="Jersey_Size" value="Extra-Large">
+									Extra-Large
+								</label>
+							</td>
+							<td>
+								<label>
+									<input type="radio" name="Shorts_Size" value="Extra-Large">
+									Extra-Large
+								</label>
 							</td>
 						</tr>
 					</table>
@@ -228,10 +301,14 @@
 					<legend><strong>Permission to Play</strong></legend>
 					<p class="formulario">I, the parent or guardian of the minor registrant, agree that the registrant and I will abide by all the rules of the Northside Youth Soccer League (NYSL). In recognizing the possibility of physical injury associated with soccer and in consideration for the “League” accepting the registrant for its soccer programs and activities, I hereby release, discharge, and/or otherwise indemnify NYSL, their employees and associated personnel and volunteers, including the facilities used for practices and games, against any claim by or on behalf of the registrant as a result of the registrant’s participation in the program and/or being transported to or from NYSL sponsored activities, which transportation.</p>
 					<p class="formulario">By entering your name below, I hereby agree and authorize the above. In addition, by signing below, I also acknowledge that I have read the cancellation policy and agree to its terms.</p>
-					Parent/Guardian Signature:
-					<input type="text" name="Parent_Guardian_Signature">
-					Date:
-					<input type="text" name="Date">
+					<label>
+						Parent/Guardian Signature:
+						<input type="text" name="Parent_Guardian_Signature">
+					</label>
+					<label>
+						Date:
+						<input type="date" name="Date">
+					</label>
 					<input type="Submit">
 				</fieldset>
 			</form>

@@ -127,12 +127,19 @@ legend{
 	font-size: 100%;
 	margin:0px;
 }
-input[type=text]{
+input[type=text], input[type=email], input[type=tel] {
 	border: none;
  	border-bottom: 1px dashed gray;
  	background-color: #58D68D; 
 }
-.textbox{
+input[type=date] {
+	background-color: #58D68D;
+	border:none;
+	border-bottom: 1px dashed gray;
+	font-size: 110%;
+	text-align: right;
+}
+.boxlarge{
 	width: 70%;
 }
 input[type=Submit]{
