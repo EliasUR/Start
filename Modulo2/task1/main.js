@@ -102,4 +102,56 @@ numindicado (numbers, 1)
 
 
 console.log ("Exercise 6: nums que se repiten")
+var repetidos = [3,6,6,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100]
+function solorepetidos (array){
+	let repeti2 = []
+	for (var i=0; i<array.length; i++){
+		if(array.indexOf(array[i], i+1)!=-1 && repeti2.indexOf(array[i])==-1){
+			repeti2.push(array [i])
+		}
+	}
+console.log(repeti2)
+}
+solorepetidos (repetidos)
 
+
+console.log ("Exercise 7")
+var myColor = ["Red", "Green", "White", "Black"]
+function e7 (array){
+	e7join = array.join (",")
+	console.log (e7join)
+}
+e7 (myColor)
+
+
+
+console.log ("JavaScript String Functions")
+
+console.log ("Exercise 1")
+var x = 32443
+function alReves (n){
+	let num = n.toString().split("").reverse().join("")
+	console.log (+ num)
+}
+alReves (x)
+
+
+console.log("Exercise 2")
+var frase1 = "algo escrito"
+function abcdario (string){
+	let abc = string.split("").sort().join("").trim()
+	console.log (abc)
+}
+abcdario (frase1)
+
+
+console.log ("Exercise 3")
+var frase2 = "algo sin creatividad"
+function mayusculas (string){
+	let mayus = string.split(" ")
+	for (var i=0; i<mayus.length; i++){
+		Mayus= mayus[i].
+	}
+	console.log (mayus)
+}
+mayusculas (frase2)
