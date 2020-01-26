@@ -3,16 +3,19 @@ console.log (algo)
 
 console.log ("Writing expressions with variables")
 
+//.....Exercise 1.....
 
 console.log ("Exercise 1: myName")
 var myName="Elías"
 console.log (myName)
 
+//.....Exercise 2.....
 
 console.log ("Exercise 2: age")
 var age=17
 console.log (age)
 
+//.....Exercise 3.....
 
 console.log ("Exercise 3: ageDiff")
 var ignasiAge=32
@@ -22,10 +25,13 @@ console.log (ageDiff)
 
 console.log ("Writing code with conditionals")
 
+//.....Exercise 4.....
+
 console.log ("Exercise 4")
 if (age>21){console.log("You are older than 21")}
 	else{console.log("You are not older than 21")}
 
+//.....Exercise 5.....
 
 console.log ("Exercise 5")
 if (age>ignasiAge) {console.log ("Ignasi is younger than you")}
@@ -34,6 +40,8 @@ if (age>ignasiAge) {console.log ("Ignasi is younger than you")}
 
 
 console.log ("JavaScript Array Functions")
+
+//.....Exercise 1.....
 
 console.log ("Exercise 1: Sorting an Array")
 var names = ["Agustín", "Alan", "Ariel","Branko", "Diego", "Eduardo", "Elías", 
@@ -46,6 +54,7 @@ for (var i = 0; i<names.length; i++) {
 	console.log (names[i])
 }
 
+//.....Exercise 2.....
 
 console.log ("Exercise 2: Looping over an array")
 var ages = [17, 19, 20, 19, 20, 20, 20, 23, 20, 20, 19, 19, 19, 17, 18, 24, 
@@ -75,6 +84,7 @@ for (var i = 0; i<pares.length; i++) {
 	console.log (pares[i])
 }
 
+//.....Exercise 3.....
 
 console.log ("Exercise 3: num mas chico")
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
@@ -85,6 +95,7 @@ function min (array){
 }
 min (numbers)
 
+//.....Exercise 4.....
 
 console.log ("Exercise 4: num mas grande")
 function max (array){
@@ -93,6 +104,7 @@ function max (array){
 }
 max (numbers)
 
+//.....Exercise 5.....
 
 console.log ("Exercise 5: num indicado")
 function numindicado (array, index){
@@ -100,6 +112,7 @@ function numindicado (array, index){
 }
 numindicado (numbers, 1)
 
+//.....Exercise 6.....
 
 console.log ("Exercise 6: nums que se repiten")
 var repetidos = [3,6,6,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100]
@@ -114,6 +127,7 @@ console.log(repeti2)
 }
 solorepetidos (repetidos)
 
+//.....Exercise 7.....
 
 console.log ("Exercise 7")
 var myColor = ["Red", "Green", "White", "Black"]
@@ -127,6 +141,8 @@ e7 (myColor)
 
 console.log ("JavaScript String Functions")
 
+//.....Exercise 1.....
+
 console.log ("Exercise 1")
 var x = 32443
 function alReves (n){
@@ -135,6 +151,7 @@ function alReves (n){
 }
 alReves (x)
 
+//.....Exercise 2.....
 
 console.log("Exercise 2")
 var frase1 = "algo escrito"
@@ -144,14 +161,38 @@ function abcdario (string){
 }
 abcdario (frase1)
 
+//.....Exercise 3.....
 
 console.log ("Exercise 3")
 var frase2 = "algo sin creatividad"
 function mayusculas (string){
-	let mayus = string.split(" ")
-	for (var i=0; i<mayus.length; i++){
-		Mayus= mayus[i].
+	let split = string.split(" ")
+	var mayusArray = []
+	for (var i=0; i<split.length; i++){
+		let split2 = split[i].split("")
+		var mayus = split2[0].toUpperCase () 
+		for (var x=1; x<split2.length; x++){
+		mayus = mayus + split2[x]
+		}
+		mayusArray.push(mayus)
 	}
-	console.log (mayus)
+	var mayusString = mayusArray.join(" ")
+	console.log(mayusString)
 }
 mayusculas (frase2)
+
+//.....Exercise 4.....
+
+console.log ("Exercise 4")
+var frase3 = "Susanita tiene un ratón, un ratón chiquitiiito"
+function palabraMasLarga (string){
+	let split = string.split(" ")
+	var pLarga = split[0]
+	for (var i=1; i<split.length; i++){
+		if (pLarga.length < split[i].length){
+			pLarga = split[i]
+		}
+	}
+	console.log (pLarga)
+}
+palabraMasLarga (frase3)
