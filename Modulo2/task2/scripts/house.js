@@ -1,4 +1,3 @@
-//var senate_data = document.getElementById("senate-data").innerHTML = JSON.stringify(data,null,2);
 const members = data.results[0].members
 const tbody = document.querySelector("tbody")
 members.forEach (members =>{
