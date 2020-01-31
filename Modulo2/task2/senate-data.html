@@ -8,11 +8,11 @@
   </head>
     
   <body>
+    <header class="container">
+      <a href="home.html" class="col-sm-10"><img src="images/tgif_logo.png"></a>
+      <a href="mailto:info@tgif.net" class="col-sm-2 text-right"><span class="glyphicon glyphicon-envelope"></span> info@tgif.net</a>
+    </header>
     <nav class="container navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">TGIF</a>
-        </div>
         <ul class="nav navbar-nav">
           <li><a href="home.html">Home</a></li>
           <li class="dropdown">
@@ -25,16 +25,36 @@
         </ul>
       </div>
     </nav>        
-  
 
-    <header>            
-      <div>
-      </div>
-    </header>
   <!--Table container-->
-    <div class="container">
-      <h2>Senators</h2>
-      <p class="text-left col-sm-8">First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
+    <main class="container">
+      <section class="container-fluid">
+        <h2>Senators</h2>
+        <p class="text-left col-sm-8">First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
+      </section>
+
+      <section class="col-sm-10">
+        Filter by Party:
+        <label>
+          <input type = "checkbox" name = "R" value = "R" checked onclick="filtro()">
+          Republican
+        </label> 
+        <label>
+          <input type = "checkbox" name = "D" value = "D" checked onclick="filtro()"> 
+          Democrat
+        </label>
+        <label>
+          <input type = "checkbox" name = "I" value = "I" checked onclick="filtro()">
+          Independent
+        </label>
+      </section>
+      <section class="col-sm-2">
+        Filter by State:
+        <select>
+          <option value="all">All</option>
+        </select>
+      </section>
+
     	<table id="senate-data" class="table table-hover">
        <thead>
          <tr>
@@ -49,7 +69,7 @@
          
        </tbody> 
       </table>
-    </div>
+    </main>
 
     <footer class="container">
       <p class="well well-sm text-center">&copy 2016 TGIF | All Rights Reserved</p>
