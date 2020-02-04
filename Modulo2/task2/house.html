@@ -5,22 +5,22 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  </head>
     </head>
     
     <body>
+        <header class="container">
+            <a href="home.html" class="col-sm-10"><img src="images/tgif_logo.png"></a>
+            <a href="mailto:info@tgif.net" class="col-sm-2 text-right"><span class="glyphicon glyphicon-envelope"></span> info@tgif.net</a>
+        </header>
         <nav class="container navbar navbar-default">
             <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">TGIF</a>
-                </div>
                 <ul class="nav navbar-nav">
                     <li><a href="home.html">Home</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Congress 113</a>
                         <ul class="dropdown-menu">
-                        <li><a href="senate-data.html">Senate</a></li>
-                        <li class="active"><a href="house.html">House</a></li>
+                            <li><a href="senate-data.html">Senate</a></li>
+                            <li class="active"><a href="house.html">House</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -28,21 +28,23 @@
         </nav>        
          
             <!--Table container-->
-        <div class="container">     
-            <h2>Congressmen</h2>
-            <p class="text-left col-sm-8">The major power of the House is to pass federal legislation that affects the entire country, although its bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no majority in the Electoral College.</p>
-            <p class="text-left col-sm-8">Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative. </p>
+        <main class="container">
+            <section> 
+                <h2>Congressmen</h2>
+                <p class="text-left col-sm-8">The major power of the House is to pass federal legislation that affects the entire country, although its bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no majority in the Electoral College.</p>
+                <p class="text-left col-sm-8">Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative. </p>
+            </section>
 
             <section class="col-sm-10">
-        Filter by Party:
-        <label>
-          <input type = "checkbox" name = "R" value = "R" checked onclick="filtro()">
-          Republican
-        </label> 
-            <label>
-                <input type = "checkbox" name = "D" value = "D" checked onclick="filtro()"> 
-                Democrat
-            </label>
+                Filter by Party:
+                <label>
+                    <input type = "checkbox" name = "R" value = "R" checked onclick="filtro()">
+                    Republican
+                </label> 
+                <label>
+                    <input type = "checkbox" name = "D" value = "D" checked onclick="filtro()"> 
+                    Democrat
+                </label>
                 <label>
                     <input type = "checkbox" name = "I" value = "I" checked onclick="filtro()">
                     Independent
@@ -70,7 +72,7 @@
                    
                 </tbody>
             </table>
-	    </div>
+	    </main>
 
         <footer class="container">
             <p class="well well-sm text-center">&copy 2016 TGIF | All Rights Reserved</p>
