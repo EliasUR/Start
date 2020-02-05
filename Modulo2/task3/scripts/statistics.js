@@ -1,5 +1,7 @@
 const members = data.results[0].members
 
+
+//.....Table1.....
 var	democrat = {
 	number:0,
 	votes:0,
@@ -59,13 +61,43 @@ table1.innerHTML = `<tr>
 						<td></td>
 					</tr>`
 
+//.....Table2.....
 
-var x = []
+var missedVotesPct = []
 
 members.forEach(members =>{
-	x.push(members.missed_votes)
-	x.sort (function(a, b){return a - b})
-
+	missedVotesPct.push(members.missed_votes_pct)
+	missedVotesPct.sort (function(a, b){return a - b})
 })
 
-console.log(x)
+
+var menor10pct = []
+
+function tenPct (Pct, tenPctArray){
+	var aux = []
+	var aux2 = []
+
+	
+
+	for (let i=0; i<Pct.length; i++){
+		if (Pct[i] !=0 && aux2.length < Pct.length * 10 / 100){
+			aux2.push (Pct[i])
+		}
+		if (Pct[i] !=0 && Pct[i] == aux2[aux2.length-1]){
+			tenPctArray.push (Pct[i])
+		}
+	}
+	console.log(tenPctArray)
+}
+
+tenPct (missedVotesPct, menor10pct)
+
+
+//.....Table3.....
+
+
+var missedVotesPctTop = missedVotesPct.reverse()
+
+var mayor10cpt = []
+
+tenPct (missedVotesPctTop, mayor10cpt)
