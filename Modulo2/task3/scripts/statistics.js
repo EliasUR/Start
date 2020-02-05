@@ -58,3 +58,14 @@ table1.innerHTML = `<tr>
 						<td>${republican.number += independent.number += democrat.number}</td>
 						<td></td>
 					</tr>`
+
+
+var x = []
+
+members.forEach(members =>{
+	x.push(members.missed_votes)
+	x.sort (function(a, b){return a - b})
+
+})
+
+console.log(x)
