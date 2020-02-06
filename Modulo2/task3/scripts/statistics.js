@@ -70,25 +70,24 @@ members.forEach(members =>{
 	missedVotesPct.sort (function(a, b){return a - b})
 })
 
+function tenPct (Pct, tenPctArray, table){
 
-var menor10pct = []
-
-function tenPct (Pct, tenPctArray){
 	var aux = []
-	var aux2 = []
-
-	
 
 	for (let i=0; i<Pct.length; i++){
-		if (Pct[i] !=0 && aux2.length < Pct.length * 10 / 100){
-			aux2.push (Pct[i])
+		if (Pct[i] !=0 && aux.length < Pct.length * 10 / 100){
+			aux.push (Pct[i])
 		}
-		if (Pct[i] !=0 && Pct[i] == aux2[aux2.length-1]){
+		if (Pct[i] !=0 && Pct[i] == aux[aux.length-1]){
 			tenPctArray.push (Pct[i])
 		}
 	}
 	console.log(tenPctArray)
+	
 }
+
+
+var menor10pct = []
 
 tenPct (missedVotesPct, menor10pct)
 
@@ -98,6 +97,30 @@ tenPct (missedVotesPct, menor10pct)
 
 var missedVotesPctTop = missedVotesPct.reverse()
 
-var mayor10cpt = []
+var mayor10pct = []
 
-tenPct (missedVotesPctTop, mayor10cpt)
+tenPct (missedVotesPctTop, mayor10pct)
+
+
+//.....Table4.....
+
+var votesPartyPct = []
+
+members.forEach(members =>{
+	votesPartyPct.push(members.votes_with_party_pct)
+	votesPartyPct.sort (function(a, b){return a - b})
+})
+
+console.log (votesPartyPct)
+
+var mecansedenombres = []
+tenPct (votesPartyPct, mecansedenombres)
+
+
+//.....table5.....
+
+var votesPartyPctTop = votesPartyPct.reverse()
+
+var mecansedenombresTop = []
+
+tenPct (votesPartyPctTop, mecansedenombresTop)
