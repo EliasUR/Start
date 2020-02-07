@@ -18,7 +18,6 @@ var republican = {
 	percentage:0
 }
 
-
 members.forEach (members => {
 	if (members.party == "R") {
 		republican.number += 1
@@ -37,9 +36,7 @@ members.forEach (members => {
 	}
 })
 
-
 var table1 = document.getElementById ("table1")
-
 table1.innerHTML = `<tr>
 						<td>Republican</td>
 						<td>${republican.number}</td>
@@ -63,7 +60,6 @@ table1.innerHTML = `<tr>
 
 //.....Table2.....
 
-
 //array con todos los porcentajes de votos perdidos de members
 var missedVotesPct = []
 members.forEach(members =>{
@@ -73,7 +69,6 @@ members.forEach(members =>{
 
 //funcion para el 10%
 function tenPct (Pct, tenPctArray, table){
-
 	var aux = []//array para el 10% sin repetidos
 	var aux2 = []//array para el 10% con repetidos
 	for (let i=0; i<Pct.length; i++){
@@ -86,7 +81,6 @@ function tenPct (Pct, tenPctArray, table){
 	}
 	console.log(aux2)
 
-
 //funcion para obtener miembros correspondientes a array2
 	var aux3 = members.filter (function (members) {
 		for (var i = 0; i < aux2.length; i++) {
@@ -95,65 +89,33 @@ function tenPct (Pct, tenPctArray, table){
 				return members
 			}
 		}
-	})
-	
+	})	
 }
-
 
 //10% de asistencia superior
 var mostEngaged = []
 tenPct (missedVotesPct, mostEngaged)
 mostEngaged.sort (function(a, b){return a.missed_votes_pct - b.missed_votes_pct})//ordena por porsentaje de votos perdidos
-
 console.log(mostEngaged)
-
-var table2 = document.getElementById ("table2")
 
 
 //.....Table3.....
-
-
 var missedVotesPctBottom = missedVotesPct.reverse()
-
 
 //10% de asistencia inferior
 var leastEngaged = []
 tenPct (missedVotesPctBottom, leastEngaged)
 leastEngaged.sort (function(a, b){return a.missed_votes_pct - b.missed_votes_pct}).reverse()//ordena por porsentaje de votos perdidos
-
 console.log(leastEngaged)
-
-var table3 = document.getElementById ("table3")
-
-// funcion tablas 2 y 3
-
-function tablesEngaged (tnumber, valores){
-	for (var i = 0; i < valores.length; i++){
-		let name = [valores[i].first_name, valores[i].middle_name, valores[i].last_name].join (" ")
-		let row = tnumber.insertRow(-1)
-		row.innerHTML = `<td>${name}</td>
-				<td>${valores[i].missed_votes}</td>
-				<td>% ${valores[i].missed_votes_pct}</td>`
-	}
-	
-}
-
-tablesEngaged (table2, mostEngaged)
-
-tablesEngaged (table3, leastEngaged)
-
 
 
 //.....Table4.....
-
-
 //array con todos los porcentajes de votos con partido de members
 var votesPartyPct = []
 members.forEach(members =>{
 	votesPartyPct.push(members.votes_with_party_pct)
 	votesPartyPct.sort (function(a, b){return a - b})
 })
-
 
 //10% menos leales
 var leastLoyal = []
@@ -162,35 +124,49 @@ leastLoyal.sort (function(a, b){return a.votes_with_party_pct - b.votes_with_par
 
 console.log (leastLoyal)
 
-var table4 = document.getElementById ("table4")
+
 //.....table5.....
-
 var votesPartyPctTop = votesPartyPct.reverse()
-
 
 //10% mas leales
 var mostLoyal = []
 tenPct (votesPartyPctTop, mostLoyal)
 mostLoyal.sort (function(a, b){return a.votes_with_party_pct - b.votes_with_party_pct}).reverse()
-
 console.log (mostLoyal)
 
-var table5 = document.getElementById ("table5")
+//.....Pasaje a tablas.....
 
-//funcion tablas 4 y 5
+if (document.getElementById ("table2") && document.getElementById ("table3")) {
+	var table2 = document.getElementById ("table2")
+	var table3 = document.getElementById ("table3")
 
-
-function tablesLoyal (tnumber, valores){
-	for (var i = 0; i < valores.length; i++){
-		let name = [valores[i].first_name, valores[i].middle_name, valores[i].last_name].join (" ")
-		let row = tnumber.insertRow(-1)
-		row.innerHTML = `<td>${name}</td>
-				<td>${valores[i].total_votes}</td>
-				<td>% ${valores[i].votes_with_party_pct}</td>`
+	// funcion tablas 2 y 3
+	function tablesEngaged (tnumber, valores){
+		for (var i = 0; i < valores.length; i++){
+			let name = [valores[i].first_name, valores[i].middle_name, valores[i].last_name].join (" ")
+			let row = tnumber.insertRow(-1)
+			row.innerHTML = `<td>${name}</td>
+					<td>${valores[i].missed_votes}</td>
+					<td>% ${valores[i].missed_votes_pct}</td>`
+		}
 	}
-	
+	tablesEngaged (table2, mostEngaged)
+	tablesEngaged (table3, leastEngaged)
 }
+else if (document.getElementById ("table4") && document.getElementById ("table5")) {
+	var table4 = document.getElementById ("table4")
+	var table5 = document.getElementById ("table5")
 
-tablesLoyal (table4, leastLoyal)
-
-tablesLoyal (table5, mostLoyal)
+	//funcion tablas 4 y 5
+	function tablesLoyal (tnumber, valores){
+		for (var i = 0; i < valores.length; i++){
+			let name = [valores[i].first_name, valores[i].middle_name, valores[i].last_name].join (" ")
+			let row = tnumber.insertRow(-1)
+			row.innerHTML = `<td>${name}</td>
+					<td>${valores[i].total_votes}</td>
+					<td>% ${valores[i].votes_with_party_pct}</td>`
+		}
+	}
+	tablesLoyal (table4, leastLoyal)
+	tablesLoyal (table5, mostLoyal)
+}
