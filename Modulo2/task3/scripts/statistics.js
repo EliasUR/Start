@@ -161,9 +161,10 @@ else if (document.getElementById ("table4") && document.getElementById ("table5"
 	function tablesLoyal (tnumber, valores){
 		for (var i = 0; i < valores.length; i++){
 			let name = [valores[i].first_name, valores[i].middle_name, valores[i].last_name].join (" ")
+			let votes_with_party = (valores[i].total_votes * valores[i].votes_with_party_pct / 100).toFixed()
 			let row = tnumber.insertRow(-1)
 			row.innerHTML = `<td>${name}</td>
-					<td>${valores[i].total_votes}</td>
+					<td>${votes_with_party}</td>
 					<td>% ${valores[i].votes_with_party_pct}</td>`
 		}
 	}
