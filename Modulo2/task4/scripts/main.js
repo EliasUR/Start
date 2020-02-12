@@ -1,26 +1,13 @@
 //.....main.js.....
 
-// const members = data.results[0].members
+function main(data){
 
-let data
-let url = "https://api.propublica.org/congress/v1/113/senate/members.json"
-let init = {
-	method: 'GET',
-	X-API-Key: VH5Ah3AWIPG55lr4Zdm8EbSISDe0rJ1aKWCUGAqd		
-}
 
-fetch(url, init)
-		.then(function(res){
-			if(res.ok){
-				return res.json()
-			} else{
-				throw new Error(res.status)
-			}
-		})
+const members = data.results[0].members
 const tbody = document.querySelector("tbody")
 
 
-var marcados =document.getElementsByTagName("input")
+var marcados = document.getElementsByTagName("input")
 let states = []
 
 
@@ -60,3 +47,8 @@ function filtro(){
 }
 filtro ()
 select.addEventListener("change",filtro)
+for (var i = 0; i<marcados.length; i++) {
+	marcados[i].addEventListener("click", filtro)
+}
+
+}
