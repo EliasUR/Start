@@ -70,20 +70,28 @@
         </select>
       </section>
 
-    	<table id="senate-data" class="table table-hover">
-       <thead>
-         <tr>
-           <th>Senator</th>
-           <th>Party Affilication</th>
-           <th>State</th>
-           <th>Years in Office</th>
-           <th>Percentage of votes with party</th>
-         </tr>
-       </thead>
-       <tbody>
-         
-       </tbody> 
-      </table>
+    	<div id="app">
+        <table id="senate-data" class="table table-hover">
+         <thead>
+           <tr>
+             <th>Senator</th>
+             <th>Party Affilication</th>
+             <th>State</th>
+             <th>Years in Office</th>
+             <th>Percentage of votes with party</th>
+           </tr>
+         </thead>
+         <tbody>
+            <tr v-for="(value, key) in senators">
+              <td>{{value.first_name}} {{value.middle_name}} {{value.last_name}}</td> 
+              <td>{{...}}</td>
+              <td>{{...}}</td>
+              <td>{{...}}</td>
+              <td>{{...}}</td>
+            </tr>
+         </tbody> 
+        </table>
+      </div>
     </main>
 
     <footer class="container">
@@ -96,7 +104,7 @@
 
     <!-- <script type="text/javascript" src="scripts/pro-congress-113-senate.js"></script> -->
     <script src="scripts/senate.js" type="text/javascript"></script>
-    <script src="scripts/main.js" type="text/javascript" id="main"></script>
+    <script src="scripts/main2.js" type="text/javascript" id="main"></script>
 
   </body>
 </html>
