@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-   <html lang="en">
     <head>
         <title>Senate Attendance</title>
         <meta charset="utf-8">
@@ -45,7 +44,7 @@
   
 
           <!--Table container-->
-        <main class="container row">
+        <main class="container row" id="app">
             <section class="col-6">
                 <h2>Attendance</h2>
                 <p>The Constitution specifies that a majority of members constitutes a quorum to do business in each house. Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases, debates continue even if a majority is not present.</p>
@@ -64,7 +63,14 @@
                         </tr>
                     </thead>
                     <tbody id="table1">
-                        
+                        <tr v-for="party in parties">
+                            <td>
+                                {{party.name}}
+                            </td>
+                            <td>
+                                {{party.nMembers}}
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </section>
@@ -81,7 +87,9 @@
                         </tr>
                     </thead>
                     <tbody id="table3">
-                        
+                        <tr>
+                            
+                        </tr>
                     </tbody>
                 </table>
             </section>
@@ -115,7 +123,9 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 <!--         <script type="text/javascript" src="scripts/pro-congress-113-senate.js"></script>    -->
-        <script type="text/javascript" src="scripts/senate.js"></script>   
-        <script type="text/javascript" src="scripts/statistics.js" id="statistics"></script> 
+        <script type="text/javascript" src="scripts/senate.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+        <script type="text/javascript" src="scripts/statisticsVue.js" id="statistics"></script> 
     </body>
 </html>

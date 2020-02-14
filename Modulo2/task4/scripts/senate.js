@@ -17,7 +17,6 @@ fetch(url, init)
 		})
 		.then(function(json){
 			data = json
-			console.log (data)
 			if (document.getElementById("main")){
 				main (data)
 			}
@@ -26,3 +25,6 @@ fetch(url, init)
 			}
 			
 		})
+		.catch(function(error){
+            console.log(error)
+        })
