@@ -70,7 +70,7 @@ function statistics (data){
 	})
 
 	//funcion para el 10%
-	function tenPct (Pct, tenPctArray, table){
+	function tenPct (Pct, tenPctArray){
 		var aux = []//array para el 10% sin repetidos
 		var aux2 = []//array para el 10% con repetidos
 		for (let i=0; i<Pct.length; i++){
@@ -81,8 +81,6 @@ function statistics (data){
 				aux2.push (Pct[i])//suma repetidos al aux en aux2
 			}
 		}
-		console.log(aux2)
-
 	//funcion para obtener miembros correspondientes a array2
 		var aux3 = members.filter (function (members) {
 			for (var i = 0; i < aux2.length; i++) {

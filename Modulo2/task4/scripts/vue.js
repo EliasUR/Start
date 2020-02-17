@@ -27,45 +27,27 @@ var app = new Vue({
 		},
 	},
 	created(){
-	  	if (document.getElementById("senate")) {
-	  		this.url = "https://api.propublica.org/congress/v1/113/senate/members.json"
-	        fetch(this.url, this.init)
-	            .then(function(res){
-	                if(res.ok){
-	               		return res.json()
-	                } else{
-	                    throw new Error(res.status)
-	                }
-	            })
-                .then(function(json){
-                    app.members = json.results[0].members
-                    console.log(app.members)
-                    app.states = app.membersStates(app.members)
-					console.log(app.states)
-                })
-                .catch(function(error){
-                	console.log(error)
-                })
-        }else if (document.getElementById("house")) {
-	  		this.url = "https://api.propublica.org/congress/v1/113/house/members.json"
-	        fetch(this.url, this.init)
-	            .then(function(res){
-	                if(res.ok){
-	               		return res.json()
-	                } else{
-	                    throw new Error(res.status)
-	                }
-	            })
-                .then(function(json){
-                    app.members = json.results[0].members
-                    console.log(app.members)
-                    app.states = app.membersStates(app.members)
-					console.log(app.states)
-                })
-                .catch(function(error){
-                	console.log(error)
-                })
-        }
+	  	document.getElementById("senate")?
+	  	this.url = "https://api.propublica.org/congress/v1/113/senate/members.json"
+	  	:this.url = "https://api.propublica.org/congress/v1/113/house/members.json"
+	    fetch(this.url, this.init)
+	        .then(function(res){
+	            if(res.ok){
+	               	return res.json()
+	            } else{
+	                throw new Error(res.status)
+	            }
+	        })
+            .then(function(json){
+                app.members = json.results[0].members
+                console.log(app.members)
+                app.states = app.membersStates(app.members)
+				console.log(app.states)
+            })
+            .catch(function(error){
+             console.log(error)
+            })
+        
     },
     methods:{
     	membersStates(array){
@@ -76,7 +58,7 @@ var app = new Vue({
 				}
 			})
             result.sort()
-
+            
             return result
         }
     },
