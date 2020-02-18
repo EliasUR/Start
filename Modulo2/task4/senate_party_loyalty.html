@@ -59,7 +59,16 @@
                         </tr>
                     </thead>
                     <tbody id="table1">
-                        
+                        <tr v-for="party in parties2">
+                            <td>{{party.name}}</td>
+                            <td>{{party.nMembers}}</td>
+                            <td>{{party.percentage}} % </td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>{{parties2.democrat.nMembers + parties2.independent.nMembers + parties2.republican.nMembers}}</td>
+                            <td></td>
+                        </tr>
                     </tbody>
                 </table>
             </section>
@@ -76,7 +85,12 @@
                         </tr>
                     </thead>
                     <tbody id="table4">
-                        
+                        <tr v-for="party in leastLoyal">
+                            <td>
+                                {{member.first_name}} {{member.middle_name}} {{member.last_name}}
+                            </td>
+                            <td></td>
+                        </tr>
                     </tbody>
                 </table>
             </section>

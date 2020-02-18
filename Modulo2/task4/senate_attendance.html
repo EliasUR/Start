@@ -59,20 +59,19 @@
                         <tr>
                             <th>Party</th>
                             <th>Number of Reps</th>
-                            <th>% Voted with Prty</th>
+                            <th>% Voted with Party</th>
                         </tr>
                     </thead>
                     <tbody id="table1">
-                        <tr v-for="party in parties">
-                            <td>
-                                {{party.name}}
-                            </td>
-                            <td>
-                                {{party.value}}
-                            </td>
-                            <td>
-                                {{party.percentage}}
-                            </td>
+                        <tr v-for="party in parties2">
+                            <td>{{party.name}}</td>
+                            <td>{{party.nMembers}}</td>
+                            <td>{{party.percentage}} % </td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>{{parties2.democrat.nMembers + parties2.independent.nMembers + parties2.republican.nMembers}}</td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
@@ -90,8 +89,12 @@
                         </tr>
                     </thead>
                     <tbody id="table3">
-                        <tr>
-                            
+                        <tr v-for="member in leastEngaged">
+                            <td>
+                                {{member.first_name}} {{member.middle_name}} {{member.last_name}}
+                            </td>
+                            <td>{{member.missed_votes}}</td>
+                            <td>{{member.missed_votes_pct}} % </td>
                         </tr>
                     </tbody>
                 </table>
@@ -109,7 +112,13 @@
                         </tr>
                     </thead>
                     <tbody id="table2">
-                        
+                        <tr v-for="member in mostEngaged">
+                            <td>
+                                {{member.first_name}} {{member.middle_name}} {{member.last_name}}
+                            </td>
+                            <td>{{member.missed_votes}}</td>
+                            <td>{{member.missed_votes_pct}} % </td>
+                        </tr>
                     </tbody>
                 </table>
             </section>

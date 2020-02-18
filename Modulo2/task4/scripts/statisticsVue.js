@@ -22,10 +22,19 @@ var app = new Vue({
 				value: "R",
 			},
 	    ],
-	    parties2: [],
+	    parties2: [
+	    	democrat = {},
+			independent = {},
+			republican = {},
+	    ],
 	    missedVotesPct: [],
 	    mostEngaged: [],
-
+	    missedVotesPctBottom: [],
+	    leastEngaged: [],
+		votesPartyPct: [],
+		leastLoyal: [],
+		votesPartyPctTop: [],
+		mostLoyal: [],
 	},
 	created (){
 		document.getElementById("senate")?
@@ -41,18 +50,35 @@ var app = new Vue({
 	        })
             .then(function(json){
                 app.members = json.results[0].members
-                console.log(app.members)
                 for (let i=0; i<app.parties1.length; i++){
                 	app.parties2[i] = app.pMembers(app.parties1[i].name, app.parties1[i].value)
                 }
-                console.log(app.parties)
-                app.members.forEach(member =>{
-					app.missedVotesPct.push(member.missed_votes_pct)
-					app.missedVotesPct.sort (function(a, b){return a - b})
-				})
-				console.log(app.missedVotesPct)
-				app.tenPct(app.missedVotesPct, app.mostEngaged)
-				console.log(app.mostEngaged)
+               	
+               	if (document.getElementById("table2") && document.getElementById("table3")) {
+	                app.members.forEach(member =>{
+						app.missedVotesPct.push(member.missed_votes_pct)
+						app.missedVotesPct.sort (function(a, b){return a - b})
+					})
+					app.tenPct(app.missedVotesPct, app.mostEngaged)
+					app.mostEngaged.sort (function(a, b){return a.missed_votes_pct - b.missed_votes_pct})
+
+
+					app.missedVotesPctBottom = app.missedVotesPct.reverse()
+					app.tenPct (app.missedVotesPctBottom, app.leastEngaged)
+					app.leastEngaged.sort (function(a, b){return a.missed_votes_pct - b.missed_votes_pct}).reverse()
+				}else if (document.getElementById("table4") && document.getElementById("table5")) {
+	                app.members.forEach(member =>{
+						app.votesPartyPct.push(member.votes_with_party_pct)
+						app.votesPartyPct.sort (function(a, b){return a - b})
+					})
+					app.tenPct(app.votesPartyPct, app.leastLoyal)
+					app.leastLoyal.sort (function(a, b){return a.votes_with_party_pct - b.votes_with_party_pct})
+
+
+					app.votesPartyPctTop = app.missedVotesPct.reverse()
+					app.tenPct (app.votesPartyPctTop, app.mostLoyal)
+					app.mostLoyal.sort (function(a, b){return a.votes_with_party_pct - b.votes_with_party_pct}).reverse()
+				}
             })
             .catch(function(error){
               	console.log(error)
@@ -88,7 +114,6 @@ var app = new Vue({
 					aux2.push (Pct[i])//suma repetidos al aux en aux2
 				}
 			}
-			console.log(aux2)
 
 		//funcion para obtener miembros correspondientes a array2
 			var aux3 = app.members.filter (function (member) {
