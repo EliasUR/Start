@@ -42,7 +42,7 @@
         </nav>
   
         <!--Table container-->
-        <main class="container row">
+        <main class="container row" id="app">
             <section class="col-6">
                 <h2>Party Loyalty</h2>
                 <p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda. </p>
@@ -54,12 +54,21 @@
                     <thead>
                         <tr>
                             <th>Party</th>
-                            <th>Number of Reps</th>
-                            <th>% Voted with Prty</th>
+                            <th class="text-center">Number of Reps</th>
+                            <th class="text-center">% Voted with Prty</th>
                         </tr>
                     </thead>
                     <tbody id="table1">
-                        
+                        <tr v-for="party in parties2">
+                            <td>{{party.name}}</td>
+                            <td class="text-center">{{party.nMembers}}</td>
+                            <td class="text-center">{{party.percentage}} % </td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td class="text-center">{{members.length}}</td>
+                            <td></td>
+                        </tr>
                     </tbody>
                 </table>
             </section>
@@ -71,12 +80,18 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Number Party Votes</th>
-                            <th>% Party Votes</th>
+                            <th class="text-center">Number Party Votes</th>
+                            <th class="text-center">% Party Votes</th>
                         </tr>
                     </thead>
                     <tbody id="table4">
-                       
+                       <tr v-for="member in leastLoyal">
+                            <td>
+                                {{member.first_name}} {{member.middle_name}} {{member.last_name}}
+                            </td>
+                            <td class="text-center">{{member.votes_with_party}}</td>
+                            <td class="text-center">{{member.votes_with_party_pct}} %</td>
+                        </tr>
                     </tbody>
                 </table>
             </section>
@@ -88,12 +103,18 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Number Party Votes</th>
-                            <th>% Party Votes</th>
+                            <th class="text-center">Number Party Votes</th>
+                            <th class="text-center">% Party Votes</th>
                         </tr>
                     </thead>
                     <tbody id="table5">
-                       
+                       <tr v-for="member in mostLoyal">
+                            <td>
+                                {{member.first_name}} {{member.middle_name}} {{member.last_name}}
+                            </td>
+                            <td class="text-center">{{member.votes_with_party}}</td>
+                            <td class="text-center">{{member.votes_with_party_pct}} %</td>
+                        </tr>
                     </tbody>
                 </table>
             </section>
@@ -109,9 +130,8 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>   
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-        <script type="text/javascript" src="scripts/house.js"></script>   
-        <script type="text/javascript" src="scripts/statistics.js" id="statistics"></script>
+        <script type="text/javascript" src="scripts/statisticsVue.js"></script> 
 </body>
 </html>

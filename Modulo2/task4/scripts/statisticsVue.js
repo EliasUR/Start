@@ -37,9 +37,10 @@ var app = new Vue({
 		mostLoyal: [],
 	},
 	created (){
-		document.getElementById("senate")?
+	document.getElementById("senate")?
 	  	this.url = "https://api.propublica.org/congress/v1/113/senate/members.json"
 	  	:this.url = "https://api.propublica.org/congress/v1/113/house/members.json"
+
 	    fetch(this.url, this.init)
 	    	.then(function(res){
 	            if(res.ok){
@@ -75,9 +76,18 @@ var app = new Vue({
 					app.leastLoyal.sort (function(a, b){return a.votes_with_party_pct - b.votes_with_party_pct})
 
 
-					app.votesPartyPctTop = app.missedVotesPct.reverse()
+					app.votesPartyPctTop = app.votesPartyPct.reverse()
 					app.tenPct (app.votesPartyPctTop, app.mostLoyal)
 					app.mostLoyal.sort (function(a, b){return a.votes_with_party_pct - b.votes_with_party_pct}).reverse()
+
+					for (var i = 0; i < app.leastLoyal.length; i++){
+						app.leastLoyal[i].votes_with_party = (app.leastLoyal[i].total_votes * app.leastLoyal[i].votes_with_party_pct / 100).toFixed()
+						app.leastLoyal[i].votes_with_party = + app.leastLoyal[i].votes_with_party
+					}
+					for (var i = 0; i < app.mostLoyal.length; i++){
+						app.mostLoyal[i].votes_with_party = (app.mostLoyal[i].total_votes * app.mostLoyal[i].votes_with_party_pct / 100).toFixed()
+						app.mostLoyal[i].votes_with_party = + app.mostLoyal[i].votes_with_party
+					}
 				}
             })
             .catch(function(error){
@@ -114,7 +124,6 @@ var app = new Vue({
 					aux2.push (Pct[i])//suma repetidos al aux en aux2
 				}
 			}
-
 		//funcion para obtener miembros correspondientes a array2
 			var aux3 = app.members.filter (function (member) {
 				for (var i = 0; i < aux2.length; i++) {

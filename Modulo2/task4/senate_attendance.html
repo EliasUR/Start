@@ -58,19 +58,19 @@
                     <thead>
                         <tr>
                             <th>Party</th>
-                            <th>Number of Reps</th>
-                            <th>% Voted with Party</th>
+                            <th class="text-center">Number of Reps</th>
+                            <th class="text-center">% Voted with Party</th>
                         </tr>
                     </thead>
                     <tbody id="table1">
                         <tr v-for="party in parties2">
                             <td>{{party.name}}</td>
-                            <td>{{party.nMembers}}</td>
-                            <td>{{party.percentage}} % </td>
+                            <td class="text-center">{{party.nMembers}}</td>
+                            <td class="text-center">{{party.percentage}} % </td>
                         </tr>
                         <tr>
                             <td>Total</td>
-                            <td>{{parties2.democrat.nMembers + parties2.independent.nMembers + parties2.republican.nMembers}}</td>
+                            <td class="text-center">{{members.length}}</td>
                             <td></td>
                         </tr>
                     </tbody>
@@ -84,8 +84,8 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Number of Missed Votes</th>
-                            <th>% Missed</th>
+                            <th class="text-center">Number of Missed Votes</th>
+                            <th class="text-center">% Missed</th>
                         </tr>
                     </thead>
                     <tbody id="table3">
@@ -93,8 +93,8 @@
                             <td>
                                 {{member.first_name}} {{member.middle_name}} {{member.last_name}}
                             </td>
-                            <td>{{member.missed_votes}}</td>
-                            <td>{{member.missed_votes_pct}} % </td>
+                            <td class="text-center">{{member.missed_votes}}</td>
+                            <td class="text-center">{{member.missed_votes_pct}} % </td>
                         </tr>
                     </tbody>
                 </table>
@@ -107,8 +107,8 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Number of Missed Votes</th>
-                            <th>% Missed</th>
+                            <th class="text-center">Number of Missed Votes</th>
+                            <th class="text-center">% Missed</th>
                         </tr>
                     </thead>
                     <tbody id="table2">
@@ -116,8 +116,8 @@
                             <td>
                                 {{member.first_name}} {{member.middle_name}} {{member.last_name}}
                             </td>
-                            <td>{{member.missed_votes}}</td>
-                            <td>{{member.missed_votes_pct}} % </td>
+                            <td class="text-center">{{member.missed_votes}}</td>
+                            <td class="text-center">{{member.missed_votes_pct}} % </td>
                         </tr>
                     </tbody>
                 </table>
@@ -135,7 +135,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 <!--         <script type="text/javascript" src="scripts/pro-congress-113-senate.js"></script>    -->
-        <!-- <script type="text/javascript" src="scripts/senate.js"></script> -->
+
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
         <script type="text/javascript" src="scripts/statisticsVue.js" id="statistics"></script> 
