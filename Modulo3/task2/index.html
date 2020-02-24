@@ -9,12 +9,16 @@
   		<link rel="stylesheet" type="text/css" href="styles/main.css">
   	</head>
   	<body>
-  		<div id="container">
-		    <div id="pageheader">
-		      	<h1>Upcoming Events</h1>
-		    </div>  
+  		<div>
+		    <header class="row m-3" id="pageheader">
+		      	<div class="col-10">
+		      		<h1>Upcoming Events</h1>
+		      		<hr>
+		      	</div>
+		      	<img class="col-2" id="logo" src="styles/images/logo.png">
+		    </header>  
 		    
-		    <div id="nav"> 
+		    <nav class="navbar" id="nav"> 
 				<ul>
 					<li>Home</li>
 			      	<li><a href="about.html">About NYSL</a></li>
@@ -23,20 +27,37 @@
 			      	<li><a href="rules.html">Rules</a></li>
 			      	<li><a href="contact.html">Contact</a></li>
 		      	</ul>
-		    </div>  
+		    </nav>  
 		    
-		    <div id="bodycontent">
-		      	<div id="upcoming">
-		        	<h2>August 4</h2>
-		        	<p class="indent">NYSL Fundraiser</p>
+		    <main class="container" id="bodycontent">
+		      	<section class="my-5 p-5 col-12" id="upcoming">
+			        <h2>August 4</h2>
+			        <p>NYSL Fundraiser</p>	
 
-		        	<h2>August 16</h2>
-		        	<p class="indent">Season Kick-off: Meet the Teams</p>
-		        
-		        	<h2>September 1</h2>
-		      	  	<p class="indent"> First Game of the Season (Check Game Schedule for details)</p>
-		      	</div>
-		    </div>
+			        <h2>August 16</h2>	
+			        <p>Season Kick-off: Meet the Teams</p>
+			        
+			        <h2>September 1</h2>
+			      	<p> First Game of the Season (Check Game Schedule for details)</p>
+			    </section>	
+			      	
+			    <div class="row mb-5">
+			      	<img id="image3" class="col-5 p-0" src="styles/images/image3.jpg">
+			      	<div class="col-7">
+			      		<img class="image mb-3" src="styles/images/image1.jpg">
+			      		<img class="image" src="styles/images/image2.jpg">
+			      	</div>
+		      	</div>	
+
+		      	
+		    </main>
 		</div>
+
+
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   	</body>
 </html>
