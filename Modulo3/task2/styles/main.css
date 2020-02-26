@@ -19,7 +19,7 @@ h1 {
 }
 
 nav {
-  width: 15vw;
+  width: 25vw;
   height: 3.2vh;
   margin:2vw;
   display: flex;
@@ -31,8 +31,7 @@ nav {
 }
 
 nav:hover {
-  width:80%;
-  height: 6vh;
+  width:95%;
 }
 
 nav a:not(.active) {
@@ -49,6 +48,7 @@ nav a.active {
   font-size: 1.6vh;
   text-align: center;
   text-decoration: none;
+  order:-1;
 }
 
 nav a:hover:not(.active) {
@@ -92,8 +92,8 @@ h2 {
       display: none;
   	}
   	nav {
-	  width: 10vw;
-	  height: 6.5vh;
+	  width: 18vw;
+	  height: 7vh;
 	  margin:2vw;
 	}
 	nav a:not(.active) {
@@ -108,3 +108,30 @@ h2 {
 
 /*prubas*/
 
+.triangulo {
+    border-style: solid;
+    border-width: 18px;
+    width: 0;
+    height: 0;
+    order:-1;
+}
+.triangulo>div {
+    border-style: solid;
+    border-width: 10px;
+    width: 0;
+    height: 0;
+    position:relative;
+}
+
+.triangulo.derecha{
+    border-color: transparent transparent transparent black;
+}
+.triangulo.derecha>div {
+    border-color: transparent transparent transparent var(--verde-claro);
+    top:-10px;
+    left:-21px;
+}
+nav:hover .triangulo{
+	order:0;
+	transform: rotate(180deg);
+}
