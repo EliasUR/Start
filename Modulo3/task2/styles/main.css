@@ -1,54 +1,110 @@
+:root {
+	--verde-claro: #acfa58;
+	--verde-oscuro: #154360;
+	--violetita: #201640;
+	--bordes: 2px solid #9e9e9e;
+}
+
 body {
-	background-color: #154360;
+	background-color: var(--verde-oscuro);
 }
 #logo {
 	width: 8vw;
 }
 h1 {
 	font-size: 8vw;
-	color: #acfa58;
+	color: var(--verde-claro);
 	font-style: oblique;
 	text-align: center;
 }
-hr {
-	color:black;
+
+nav {
+  width: 15vw;
+  height: 3.2vh;
+  margin:2vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: width 0.3s;
+  transition-timing-function: ease;
 }
+
+nav:hover {
+  width:80%;
+  height: 6vh;
+}
+
+nav a:not(.active) {
+  color: white;
+  font-size: 1.6vh;
+}
+
+nav a.active {
+  width: 15vw;
+  background: var(--violetita);
+  border: var(--bordes);
+  border-radius: 20px;
+  color: var(--verde-claro);
+  font-size: 1.6vh;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 20px;
+  border: var(--bordes);
+  border-radius: 20px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  padding: 1px 10px;
+}
+
 section {
-	background-color: #201640;
-	border: 2px solid #9e9e9e;
+	background-color: var(--violetita);
+	border: var(--bordes);
 	border-radius: 20px;
 }
 p {
 	color: #bdbdbd;
-	font-size: 1.5em
+	font-size: 1.6em;
 }
 h2 {
 	color: white;
-	margin-left: 2vw
+	margin-left: 2vw;
 }
 .image {
-	width: 40vw;
-	border: 2px solid #9e9e9e;
+	width: 103%;
+	border: var(--bordes);
 	border-radius: 20px;
-	box-shadow: 1px 1px 20px black
+	box-shadow: 1px 1px 20px black;
 }
 #image3{
-	border: 2px solid #9e9e9e;
+	border: var(--bordes);
 	border-radius: 20px;
-	box-shadow: 1px 1px 20px black
+	box-shadow: 1px 1px 20px black;
 }
 
+@media (orientation:landscape) {
+  	.image, #image3 {
+      display: none;
+  	}
+  	nav {
+	  width: 10vw;
+	  height: 6.5vh;
+	  margin:2vw;
+	}
+	nav a:not(.active) {
+	  font-size: 3vh;
+	}
 
-@media (min-width: 992px) {
-  .image {
-    width: 53vw;
-  }
+	nav a.active {
+	  width: 10vw;
+	  font-size: 3vh;
+	}
+}
 
-@media (min-width: 1024px) {
-  .image {
-    width: 54vw;
-  }
-@media (min-width: 1440px) {
-  .image {
-    width: 45vw;
-  }
+/*prubas*/
+
