@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>prueba</title>
+	<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+
+
+	<style type="text/css">
+		:root{
+			--oscuro: #23374d;
+		    --azul: #1089ff;
+		    --blanco-oscuro: #e5e5e5;
+		    --blanco-claro: #eeeeee;
+		}
+		body{
+			width: 100vw;
+			height: 100vh;
+		}
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#container{
+			height: 100vh;
+			width: 100vw;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		  	grid-template-rows: 1fr 1fr;
+		  	grid-template-areas:
+		  		"divDos divDos"
+		  		"divUno divUno";
+		}
+		#div1{
+			background-color: var(--azul);
+			grid-area: divUno;
+		}
+		#div2{
+			background-color: var(--blanco-oscuro);
+			grid-area: divDos
+		}
+		@media (orientation:landscape){
+			#container{
+				grid-template-areas:
+		  		"divUno divDos"
+		  		"divUno divDos";
+			}
+		}
+
+		/*styles para componentes*/
+
+		#info{
+			height: 70%;
+			display:flex;
+			justify-content: space-around;
+			flex-direction: column;
+			align-items: center;
+
+		}
+		#description{
+			width: 90%;
+			/*border: 2px solid var(--oscuro);*/
+			align-self: center;
+		}
+		h2, p, h4{
+			color: var(--oscuro);
+			font-family: 'Righteous';
+		}
+		p{
+			text-indent: 2%;
+			overflow: scroll;
+		}
+		.property{
+			background-color: lightblue 
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<div id="container">
+			<div id="div1">
+				<div id="info">
+					<h2>
+						{{data.colors.title}}
+					</h2>
+					<div id="description">
+						<p>
+							<span v-html="data.colors.description"></span>
+						</p>
+					</div>
+					<h4>
+						<li>{{data.colors.task}}</li>
+					</h4>
+					
+				</div>
+				<hr>
+				<div>
+					
+				</div>
+			</div>
+			<div id="div2">
+				
+			</div>
+		</div>
+	</div>
+	
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/javascript" src="playground.js"></script>
+	<script type="text/javascript">
+		var app = new Vue ({
+			el: '#app',
+			data: {
+				data: data
+			}
+		})
+	</script>
+</body>
+</html>
