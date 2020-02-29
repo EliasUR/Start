@@ -26,11 +26,11 @@
 			height: 100vh;
 			width: 100vw;
 			display: grid;
-			grid-template-columns: 1fr 1fr;
-		  	grid-template-rows: 1fr 1fr;
+			grid-template-columns: 1fr 2fr;
+		  	grid-template-rows: 1fr 2fr;
 		  	grid-template-areas:
-		  		"divDos divDos"
-		  		"divUno divUno";
+		  		"divUno divDos"
+		  		"divUno divDos";
 		}
 		#div1{
 			background-color: var(--azul);
@@ -40,18 +40,23 @@
 			background-color: var(--blanco-oscuro);
 			grid-area: divDos
 		}
-		@media (orientation:landscape){
+		@media (orientation:portrait){
 			#container{
 				grid-template-areas:
-		  		"divUno divDos"
-		  		"divUno divDos";
+		  			"divDos divDos"
+		  			"divUno divUno";
 			}
+		}
+		#inputBox{
+			width: 100%;
+			height: 40%
 		}
 
 		/*styles para componentes*/
 
 		#info{
-			height: 70%;
+			width: 100%;
+			height: 60%;
 			display:flex;
 			justify-content: space-around;
 			flex-direction: column;
@@ -61,19 +66,32 @@
 		#description{
 			width: 90%;
 			/*border: 2px solid var(--oscuro);*/
-			align-self: center;
 		}
 		h2, p, h4{
 			color: var(--oscuro);
 			font-family: 'Righteous';
 		}
 		p{
-			text-indent: 2%;
-			overflow: scroll;
+			text-indent: 3%;
 		}
 		.property{
 			background-color: lightblue 
 		}
+		h4{
+			align-self: flex-start;
+			padding: 5%;
+		}
+
+
+		@media(orientation:portrait){
+			#description{
+				overflow: auto;
+			}
+			h4{
+				text-indent: 3%;
+			}
+		}
+
 	</style>
 </head>
 <body>
@@ -90,13 +108,13 @@
 						</p>
 					</div>
 					<h4>
-						<li>{{data.colors.task}}</li>
+						{{data.colors.task}}
 					</h4>
 					
 				</div>
 				<hr>
-				<div>
-					
+				<div id="inputBox">
+					<input type="text" name="algo">
 				</div>
 			</div>
 			<div id="div2">
