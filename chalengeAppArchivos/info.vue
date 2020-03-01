@@ -1,21 +1,23 @@
 <template>
 	<div id="info">
 		<h2>
-			{{data.object.title}}
+			{{object.title}}
 		</h2>
 		<div id="description">
 			<p>
-				<span v-html="data.object.description"></span>
+				<span v-html="object.description"></span>
 			</p>
 		</div>
 		<h4>
-			{{data.object.task}}
+			{{object.task}}
 		</h4>
 	</div>
 </template>
 
 <script>
-	
+	export default {
+
+	}
 </script>
 
 <style scoped>
@@ -30,10 +32,11 @@
 		}
 		#description{
 			width: 90%;
-			/*border: 2px solid var(--oscuro);*/
+			overflow: auto;
+			/*border: 2px solid #23374d;*/
 		}
 		h2, p, h4{
-			color: var(--oscuro);
+			color: #23374d;
 			font-family: 'Righteous';
 		}
 		p{
@@ -49,9 +52,6 @@
 
 
 		@media(orientation:portrait){
-			#description{
-				overflow: auto;
-			}
 			h4{
 				text-indent: 3%;
 			}
