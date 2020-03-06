@@ -1,0 +1,23 @@
+@import '../../Vars.scss';
+main{
+    width: 100vw;
+    height: 100%;
+    flex-grow: 1;
+    background-color: $bg-green;
+    overflow: auto;
+}
+.matchDivs{
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 50vw;
+}
+#matchesContainer{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    margin: 1rem;
+}
