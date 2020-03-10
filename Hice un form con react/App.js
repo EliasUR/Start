@@ -14,7 +14,7 @@ function App() {
   ]
   const [users, setUsers] = useState(usersData)
 
-
+  console.log(users)
 // añadir usuario
   const addUsers = (user) => {
     user.id = uuidv4()

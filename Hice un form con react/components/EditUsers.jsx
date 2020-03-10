@@ -1,6 +1,5 @@
 import React from 'react';
 import {useForm} from 'react-hook-form';
-import {v4 as uuidv4} from 'uuid';
 
 
 const EditUsers = (props) => {
@@ -13,7 +12,7 @@ const EditUsers = (props) => {
     setValue('username', props.cambiarUsuario.username)
 
     const onSubmit = (data, element) => {
-        data.id = uuidv4()
+        data.id = props.cambiarUsuario.id
         props.usuarioCambiado(props.cambiarUsuario.id, data)
     }
 
