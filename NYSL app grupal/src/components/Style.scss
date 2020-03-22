@@ -1,0 +1,237 @@
+@import '../Vars.scss';
+
+//Header
+.header{
+    color: white;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    background-color: $grey-bg;
+    border-bottom: white 1px solid;
+    h1{
+        text-align: center;
+        color: honeydew;
+      }
+      .userphoto{
+          border-radius: 50%;
+      }
+    @media (orientation:portrait) {
+        h1{
+            font-size: x-large;
+        }
+    }    
+    p{
+        margin: 10px;
+    }
+    img{
+        height: 7vh;
+        margin: 0 1vw;
+
+    }
+}
+//Nav
+.nav{
+    color: white;
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 0rem;
+    width: 100%;
+    height: 10vh;
+    background-color: $grey-bg;
+    border-top: 1px solid white;
+    div{
+        display: inline-block;
+    }
+    .img{
+        height: 80%;
+    }
+}
+//Home
+.home{
+    color: white;
+    width: 100vw;
+    height: 100%;
+    flex-grow: 1;
+    background-color: $bg-green;
+    
+    #matchesContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .h2-bg{
+        border-radius: 10px;
+        border: 1px solid white;
+        margin: 1rem;
+        text-align: center;
+        background-color: black;
+    }
+}
+//news
+.matchDivs{
+    color: white;
+    background-color: $primary-green;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80vw;
+    .downArrow{
+        width: 7%;
+    }
+    .matchDivsImg{
+        width: 30%;
+        
+        img{
+            width: 90%;
+            border: 1px solid black;
+        }
+    }
+    .matchDivsText{
+        width: 65%;
+    }
+}
+//favorite team
+.fav-match-container{
+    color: white;
+    height: 15vh;
+    background-color: $primary-green;
+    div > img{
+        height: 100%;
+    }
+    div{
+        height: 75%;
+    }
+}
+//match container
+.match-container{
+    color: white;
+    margin: 10px;
+    height: 20vh;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: $primary-green;
+    div > img{
+        height: 80%;
+    }
+    div{
+        height: 75%;
+    }
+}
+
+//LOGIN
+.fondo{
+    color: black;
+    background-image: url("../images/football.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.elementos{
+  margin: 1rem;
+  padding: 1rem;
+  opacity: 0.7;
+  text-align: center;
+}
+.loginbutton{
+    border-radius: 10px;
+    background-color: #ffffffDD;
+}
+
+//forum
+.message{
+    height: 8vh;
+    background-color: $bg-green;
+    padding-bottom: 15px;
+    input{
+        font-size: large;
+        width: 100%;
+        border-radius: 10px;
+    }
+    form{
+        width: 500px;
+    }
+}
+
+//modals
+#modals{
+    display: none;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #00000044;
+    h2,h3{
+        color: black;
+        text-align: center;
+        margin: 10px;
+    }
+
+    iframe{
+        border-radius: 10px;
+        border: 1px solid black;
+        margin-bottom: 15px;
+    }
+}
+//NewsStyle
+    
+    .newsContainer{
+        width: 100%;
+        height: 38vh;
+        display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 4fr 1fr;
+              grid-template-areas:
+              "title title"
+              "date date"
+              "newsImage subtitle"
+              "button button";
+        .newsTitle{
+            grid-area: title;
+            text-align: center;
+        }
+        .newsDate{
+            grid-area: date;
+        }
+        .newsImage{
+            grid-area: newsImage;
+            img{
+                width: 85%;
+                height: 90%;
+                border: 1px solid #ffffffDD
+                
+            }
+        }
+        .newsSubtitle{
+            grid-area: subtitle;
+        }
+        .newsButton{
+            grid-area: button;
+            width: 100%;
+            height: 9%;
+            a{
+                width: 100%;
+                height: 100%;
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    height: 100%;
+                }
+            }
+        }
+    }
+    @media(orientation:landscape){
+        .newsContainer{
+            height: 70vh;
+        }
+    }
+//NewsStyle
