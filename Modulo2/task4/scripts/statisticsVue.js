@@ -16,7 +16,7 @@ var app = new Vue({
 			},
 			independent = {
 				name: "Independent",
-				value: "I",			},
+				value: "ID",			},
 			republican = {
 				name: "Republican",
 				value: "R",
